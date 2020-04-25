@@ -1142,7 +1142,7 @@ if(screen.width<=1024)
       conNode21.style.opacity="0";
       conClass=conNode1.classList[1];
       document.querySelectorAll("."+conClass)[1].style.height="200px";
-      document.querySelectorAll("."+conClass)[1].style.width=20%;
+      document.querySelectorAll("."+conClass)[1].style.width="20%";
       document.querySelectorAll("."+conClass)[1].style.opacity="1";
 
       conNode21=document.querySelectorAll("."+conClass)[1];
