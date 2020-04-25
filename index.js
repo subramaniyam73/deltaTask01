@@ -134,8 +134,8 @@ document.querySelector("#ng").addEventListener("click",function(){
     document.querySelector(".lookControl").innerHTML="<br>choose the difficulty";
     if(screen.width>=320&&screen.width<=1024)
     {
-      document.querySelector(".lookControl").style.width="100%";
-      document.querySelector(".lookControl").style.height="852px";
+      document.querySelector(".lookControl").style.width="500px";
+      document.querySelector(".lookControl").style.height="400px";
     }
     else{
         setTimeout(function(){document.querySelector(".lookControl").style.height="400px";},0);
@@ -215,8 +215,8 @@ for(let j=1;j<=20;j++)
 
         if(screen.width>=320&&screen.width<=1024)
          {
-            document.querySelector(".lookControl").style.width="100%";
-            document.querySelector(".lookControl").style.height="852px";
+            document.querySelector(".lookControl").style.width="500px";
+            document.querySelector(".lookControl").style.height="400px";
           }
         else{
            setTimeout(function(){document.querySelector(".lookControl").style.height="400px";},0);
@@ -438,8 +438,8 @@ for(let j=1;j<=20;j++)
         timerObject.stop();
         if(screen.width>=320&&screen.width<=1024)
          {
-            document.querySelector(".lookControl").style.width="100%";
-            document.querySelector(".lookControl").style.height="852px";
+            document.querySelector(".lookControl").style.width="500px";
+            document.querySelector(".lookControl").style.height="400px";
           }
         else{
            setTimeout(function(){document.querySelector(".lookControl").style.height="400px";},0);
