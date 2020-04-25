@@ -248,17 +248,19 @@ body{
     margin-bottom:200px;
   }
   .leftHiding{
-    width:200px;
+    width:135px;
     height:800px;
     position:absolute;
-    left:-200px;
+    left:-135px;
+    background-color:#000000;
 
   }
   .rightHiding{
-    width:200px;
+    width:135px;
     height:800px;
     position:absolute;
-    right:-200px;
+    right:-135px;
+    background-color:#000000;
   }
 
 
