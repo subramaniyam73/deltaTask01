@@ -8,6 +8,7 @@ if(screen.width>=320&&screen.width<=1024)
   document.querySelector(".rightHiding").style.right="-50px";
 
 }
+alert("hacked");
 document.querySelectorAll(".b1")[1].style.width="0px";
 document.querySelectorAll(".b1")[1].style.height="0px";
 document.querySelectorAll(".b2")[1].style.width="0px";
