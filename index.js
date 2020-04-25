@@ -2,6 +2,7 @@ let assignedValues=[],gameStatus=true,i,cc,bestScores=[],levelValue,levelValue2,
 let gradientValues=["3d004d","660080","8f00b3","cc00ff","e580ff","b3daff","80c1ff","4da9ff","0077e6","005cb3","004280","004d00","006600","009900","00b300","00cc00","00ff00","80ff80","b3ffb3","b3d1ff","66a3ff","3385ff","0066ff","0047b3","003380","800000","b30000","e60000","ff6666"];
 let gradientValues2=["ff6666","ff4d4d","ff3333","cc0000","b30000","990000","800000","4d94ff","3385ff","1a75ff","0066ff","0052cc","003d99","80ff80","66ff66","00cc00","00b300","009900","008000"];
 gradientCount=0;let sw=document.querySelector(".num").offsetWidth;
+let ngVariable=1;
 document.querySelectorAll(".b1")[1].style.width="0px";
 document.querySelectorAll(".b1")[1].style.height="0px";
 document.querySelectorAll(".b2")[1].style.width="0px";
@@ -71,7 +72,7 @@ document.querySelector("#ng").style.opacity="0.3";
 
 document.querySelector(".lookControl").innerHTML="<br>choose the difficulty";
 document.querySelector(".lookControl").addEventListener("click",function(){
-  if(levelValue){
+  if(levelValue&&ngVariable==1){
     audioObject1.play();
     setTimeout(function(){audioObject1.pause();audioObject1.load();},4000);
 
@@ -91,21 +92,25 @@ document.querySelector("#ng").addEventListener("click",function(){
 
 
 
-  for(let lll=1;lll<=20;lll++)
+ 
+  if(count===(40+(levelValue-1)*20+1))
   {
+    
+     for(let lll=1;lll<=20;lll++)
+     {
     document.querySelectorAll(".b"+lll)[0].classList.remove("cover");
     document.querySelectorAll(".b"+lll)[1].classList.remove("cover");
 
-  }
-  for(let lll=1;lll<=20;lll++)
-  {
+     }
+    for(let lll=1;lll<=20;lll++)
+     {
     document.querySelectorAll(".b"+lll)[0].style.backgroundColor="#400082";
     document.querySelectorAll(".b"+lll)[1].style.backgroundColor="#400082";
 
-  }
+     }
 
-  if(count===(40+(levelValue-1)*20+1))
-  {
+    
+    ngVariable=1;
     conCount=0,conCount2=0,conCoun3=0,conCoun4=0;
 
     for(let lll=1;lll<=20;lll++)
@@ -211,6 +216,7 @@ for(let j=1;j<=20;j++)
       else if(cc==(40+(levelValue-1)*20))
       {
         timerObject.stop();
+        ngVariable=0;
 
 
         if(screen.width>=320&&screen.width<=1024)
