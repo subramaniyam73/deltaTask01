@@ -2,7 +2,7 @@ let assignedValues=[],gameStatus=true,i,cc,bestScores=[],levelValue,levelValue2,
 let gradientValues=["3d004d","660080","8f00b3","cc00ff","e580ff","b3daff","80c1ff","4da9ff","0077e6","005cb3","004280","004d00","006600","009900","00b300","00cc00","00ff00","80ff80","b3ffb3","b3d1ff","66a3ff","3385ff","0066ff","0047b3","003380","800000","b30000","e60000","ff6666"];
 let gradientValues2=["ff6666","ff4d4d","ff3333","cc0000","b30000","990000","800000","4d94ff","3385ff","1a75ff","0066ff","0052cc","003d99","80ff80","66ff66","00cc00","00b300","009900","008000"];
 gradientCount=0;let sw,sww;
-alert("subuhacker++");
+sw=screen.width/5;
 document.querySelectorAll(".b1")[1].style.width="0px";
 document.querySelectorAll(".b1")[1].style.height="0px";
 document.querySelectorAll(".b2")[1].style.width="0px";
@@ -763,7 +763,8 @@ document.querySelector("#l3").addEventListener("click",function(){
   }
 });
 function changePos(){
-
+if(screen.width>1024)
+{
   conNode1=document.querySelectorAll(".b1")[0];
   conNode2=document.querySelectorAll(".b2")[0];
   conNode3=document.querySelectorAll(".b3")[0];
@@ -1098,8 +1099,341 @@ function changePos(){
 
   },10);
 
+}
+if(screen.width<=1024)
+{
+  conNode1=document.querySelectorAll(".b1")[0];
+  conNode2=document.querySelectorAll(".b2")[0];
+  conNode3=document.querySelectorAll(".b3")[0];
+  conNode4=document.querySelectorAll(".b4")[0];
+  conNode5=document.querySelectorAll(".b5")[0];
+  conNode21=document.createElement("button");
+  document.querySelector(".container").appendChild(conNode21);
+  conNode21.classList.add("num");
+  conNode1.style.top="0px";
+  conNode1.style.right=sw*4+"px";
+  conNode2.style.top="0px";
+  conNode2.style.right=sw*3+"px";
+  conNode3.style.top="0px";
+  conNode3.style.right=sw*2+"px";
+  conNode4.style.top="0px";
+  conNode4.style.right=sw+"px";
+  conNode5.style.top="0px";
+  conNode5.style.right="0px";
+  conNode21.style.top="0px";
+  conNode21.style.right=-sw+"px";
+  conInterval=setInterval(function(){
+    conCount++;
+    conNode1.style.right=sw*4+conCount*1+"px";
+    conNode2.style.right=sw*3+conCount*1+"px";
+    conNode3.style.right=sw*2+conCount*1+"px";
+    conNode4.style.right=sw+conCount*1+"px";
+    conNode5.style.right=0+conCount*1+"px";
+    conNode21.style.right=-sw+conCount*1+"px";
+    if(Number(conNode1.style.right.slice(0,3))>=sw*4&&conFlag==1)
+    {
+      conFlag=2;
+      /*conTemp=conNode6;
+      document.querySelector(".container").removeChild(conTemp);
+      conNode6=conNode1.cloneNode(true);
+      document.querySelector(".container").appendChild(conNode6);*/
+      conNode21.style.height="0px";
+      conNode21.style.width="0px";
+      conNode21.style.opacity="0";
+      conClass=conNode1.classList[1];
+      document.querySelectorAll("."+conClass)[1].style.height="200px";
+      document.querySelectorAll("."+conClass)[1].style.width=20%;
+      document.querySelectorAll("."+conClass)[1].style.opacity="1";
+
+      conNode21=document.querySelectorAll("."+conClass)[1];
+      conNode21.style.top="0px";
 
 
 
 
+
+
+    }
+
+    if(Number(conNode1.style.right.slice(0,3))>=500)
+    {
+      conFlag=1;
+      conTemp=conNode1;
+      conNode1=conNode2;
+      conNode2=conNode3;
+      conNode3=conNode4;
+      conNode4=conNode5;
+      conNode5=conTemp;
+      conCount=0;
+
+    }
+    if(count==40+(levelValue-1)*20)
+    {
+      clearInterval(conInterval);
+    }
+
+
+
+  },10);
+  conNode6=document.querySelectorAll(".b6")[0];
+  conNode7=document.querySelectorAll(".b7")[0];
+  conNode8=document.querySelectorAll(".b8")[0];
+  conNode9=document.querySelectorAll(".b9")[0];
+  conNode10=document.querySelectorAll(".b10")[0];
+  conNode22=document.createElement("button");
+  document.querySelector(".container").appendChild(conNode22);
+  conNode22.classList.add("num");
+  conNode6.style.top="100px";
+  conNode6.style.left="0px";
+  conNode7.style.top="100px";
+  conNode7.style.left=sw+"px";
+  conNode8.style.top="100px";
+  conNode8.style.left=sw*2+"px";
+  conNode9.style.top="100px";
+  conNode9.style.left=sw*3+"px";
+  conNode10.style.top="100px";
+  conNode10.style.left=sw*4+"px";
+  conNode22.style.top="100px";
+  conNode22.style.left=-sw+"px";
+  conInterval2=setInterval(function(){
+    conNode6.style.top="200px";
+
+    conNode7.style.top="200px";
+
+    conNode8.style.top="200px";
+
+    conNode9.style.top="200px";
+
+    conNode10.style.top="200px";
+
+    conNode22.style.top="200px";
+
+
+    conCount2++;
+    conNode10.style.left=sw*4+conCount2*1+"px";
+    conNode9.style.left=sw*3+conCount2*1+"px";
+    conNode8.style.left=sw*2+conCount2*1+"px";
+    conNode7.style.left=sw+conCount2*1+"px";
+    conNode6.style.left=0+conCount2*1+"px";
+    conNode22.style.left=-sw+conCount2*1+"px";
+    if(Number(conNode10.style.left.slice(0,3))>=sw*4&&conFlag2==1)
+    {
+      conFlag2=2;
+      /*conTemp=conNode6;
+      document.querySelector(".container").removeChild(conTemp);
+      conNode6=conNode1.cloneNode(true);
+      document.querySelector(".container").appendChild(conNode6);*/
+      conNode22.style.height="0px";
+      conNode22.style.width="0px";
+      conNode22.style.opacity="0";
+      conClass2=conNode10.classList[1];
+      document.querySelectorAll("."+conClass2)[1].style.height="200px";
+      document.querySelectorAll("."+conClass2)[1].style.width="20%";
+      document.querySelectorAll("."+conClass2)[1].style.opacity="1";
+
+      conNode22=document.querySelectorAll("."+conClass2)[1];
+      conNode22.style.top="0px";
+
+
+
+
+
+
+    }
+
+    if(Number(conNode10.style.left.slice(0,3))>=sw*5)
+    {
+      conFlag2=1;
+      conTemp2=conNode10;
+      conNode10=conNode9;
+      conNode9=conNode8;
+      conNode8=conNode7;
+      conNode7=conNode6;
+      conNode6=conTemp2;
+      conCount2=0;
+
+    }
+    if(count==40+(levelValue-1)*20+1)
+    {
+      clearInterval(conInterval2);
+    }
+
+
+
+  },10);
+
+  conNode11=document.querySelectorAll(".b11")[0];
+  conNode12=document.querySelectorAll(".b12")[0];
+  conNode13=document.querySelectorAll(".b13")[0];
+  conNode14=document.querySelectorAll(".b14")[0];
+  conNode15=document.querySelectorAll(".b15")[0];
+  conNode23=document.createElement("button");
+  document.querySelector(".container").appendChild(conNode23);
+  conNode23.classList.add("num");
+  conNode11.style.top="0px";
+  conNode11.style.right=sw*4+"px";
+  conNode12.style.top="0px";
+  conNode12.style.right=sw*3+"px";
+  conNode13.style.top="0px";
+  conNode13.style.right=sw*2+"px";
+  conNode14.style.top="0px";
+  conNode14.style.right=sw+"px";
+  conNode15.style.top="0px";
+  conNode15.style.right="0px";
+  conNode23.style.top="0px";
+  conNode23.style.right=-sw+"px";
+  conInterval3=setInterval(function(){
+
+    conNode11.style.top="400px";
+
+    conNode12.style.top="400px";
+
+    conNode13.style.top="400px";
+
+    conNode14.style.top="400px";
+
+    conNode15.style.top="400px";
+
+    conNode23.style.top="400px";
+
+    conCount3++;
+    conNode11.style.right=sw*4+conCount3*1+"px";
+    conNode12.style.right=sw*3+conCount3*1+"px";
+    conNode13.style.right=sw*2+conCount3*1+"px";
+    conNode14.style.right=sw+conCount3*1+"px";
+    conNode15.style.right=0+conCount3*1+"px";
+    conNode23.style.right=-sw+conCount3*1+"px";
+    if(Number(conNode11.style.right.slice(0,3))>=sw*4&&conFlag3==1)
+    {
+      conFlag3=2;
+      /*conTemp=conNode6;
+      document.querySelector(".container").removeChild(conTemp);
+      conNode6=conNode1.cloneNode(true);
+      document.querySelector(".container").appendChild(conNode6);*/
+      conNode23.style.height="0px";
+      conNode23.style.width="0px";
+      conNode23.style.opacity="0";
+      conClass3=conNode11.classList[1];
+      document.querySelectorAll("."+conClass3)[1].style.height="200px";
+      document.querySelectorAll("."+conClass3)[1].style.width="20%";
+      document.querySelectorAll("."+conClass3)[1].style.opacity="1";
+
+      conNode23=document.querySelectorAll("."+conClass3)[1];
+      conNode23.style.top="0px";
+
+
+
+
+
+
+    }
+
+    if(Number(conNode11.style.right.slice(0,3))>=sw*5)
+    {
+      conFlag3=1;
+      conTemp3=conNode11;
+      conNode11=conNode12;
+      conNode12=conNode13;
+      conNode13=conNode14;
+      conNode14=conNode15;
+      conNode15=conTemp3;
+      conCount3=0;
+
+    }
+    if(count==40+(levelValue-1)*20+1)
+    {
+      clearInterval(conInterval3);
+    }
+
+
+
+  },10);
+
+  conNode16=document.querySelectorAll(".b16")[0];
+  conNode17=document.querySelectorAll(".b17")[0];
+  conNode18=document.querySelectorAll(".b18")[0];
+  conNode19=document.querySelectorAll(".b19")[0];
+  conNode20=document.querySelectorAll(".b20")[0];
+  conNode24=document.createElement("button");
+  document.querySelector(".container").appendChild(conNode24);
+  conNode24.classList.add("num");
+  conNode16.style.top="600px";
+  conNode16.style.left="0px";
+  conNode17.style.top="600px";
+  conNode17.style.left=sw+"px";
+  conNode18.style.top="600px";
+  conNode18.style.left=sw*2+"px";
+  conNode19.style.top="600px";
+  conNode19.style.left=sw*3+"px";
+  conNode20.style.top="600px";
+  conNode20.style.left=sw*4+"px";
+  conNode24.style.top="600px";
+  conNode24.style.left=-sw+"px";
+  conInterval4=setInterval(function(){
+    conNode16.style.top="600px";
+
+    conNode17.style.top="600px";
+
+    conNode18.style.top="600px";
+
+    conNode19.style.top="600px";
+
+    conNode20.style.top="600px";
+    conNode24.style.top="600px";
+
+
+    conCount4++;
+    conNode20.style.left=sw*4+conCount4*1+"px";
+    conNode19.style.left=sw*3+conCount4*1+"px";
+    conNode18.style.left=sw*2+conCount4*1+"px";
+    conNode17.style.left=sw+conCount4*1+"px";
+    conNode16.style.left=0+conCount4*1+"px";
+    conNode24.style.left=-sw+conCount4*1+"px";
+    if(Number(conNode20.style.left.slice(0,3))>=sw*4&&conFlag4==1)
+    {
+      conFlag4=2;
+      /*conTemp=conNode6;
+      document.querySelector(".container").removeChild(conTemp);
+      conNode6=conNode1.cloneNode(true);
+      document.querySelector(".container").appendChild(conNode6);*/
+      conNode24.style.height="0px";
+      conNode24.style.width="0px";
+      conNode24.style.opacity="0";
+      conClass4=conNode20.classList[1];
+      document.querySelectorAll("."+conClass4)[1].style.height="200px";
+      document.querySelectorAll("."+conClass4)[1].style.width="20%";
+      document.querySelectorAll("."+conClass4)[1].style.opacity="1";
+
+      conNode24=document.querySelectorAll("."+conClass4)[1];
+      conNode24.style.top="0px";
+
+
+
+
+
+
+    }
+
+    if(Number(conNode20.style.left.slice(0,3))>=sw*5)
+    {
+      conFlag4=1;
+      conTemp4=conNode20;
+      conNode20=conNode19;
+      conNode19=conNode18;
+      conNode18=conNode17;
+      conNode17=conNode16;
+      conNode16=conTemp4;
+      conCount4=0;
+
+    }
+    if(count==(40+(levelValue-1)*20+1))
+    {
+      clearInterval(conInterval4);
+    }
+
+
+
+  },10);
+
+}
 }
