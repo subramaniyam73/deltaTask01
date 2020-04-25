@@ -248,17 +248,17 @@ body{
     margin-bottom:200px;
   }
   .leftHiding{
-    width:160px;
+    width:200px;
     height:800px;
     position:absolute;
-    left:-146px;
+    left:-200px;
 
   }
   .rightHiding{
-    width:160px;
+    width:200px;
     height:800px;
     position:absolute;
-    right:-160px;
+    right:-200px;
   }
 
 
