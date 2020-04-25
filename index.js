@@ -1371,17 +1371,17 @@ if(screen.width>1024)
    conNode24.style.top="390px";
    conNode24.style.left="-130px";
    conInterval4=setInterval(function(){
-     conNode16.style.top="390px";
+     conNode16.style.top="600px";
 
-     conNode17.style.top="390px";
+     conNode17.style.top="600px";
 
-     conNode18.style.top="390px";
+     conNode18.style.top="600px";
 
-     conNode19.style.top="390px";
+     conNode19.style.top="600px";
 
-     conNode20.style.top="390px";
+     conNode20.style.top="600px";
 
-     conNode24.style.top="390px";
+     conNode24.style.top="600px";
 
 
      conCount4++;
