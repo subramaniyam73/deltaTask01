@@ -206,16 +206,11 @@ body{
   }
   .details{
   }
-  .posDiv{
-    width:650px;
-    height:800px;
-    font-size:400%;
-  }
+
 
   .num{
     font-size:5rem;
-    width:130px;
-    height: 200px;
+
 
   }
     #ng{
@@ -235,32 +230,6 @@ body{
     margin-top:50px;
     font-size:3rem;
     color:#3282b8;
-  }
-  .lookControl{
-    font-size:9rem;
-    width:650px;
-    height:800px;
-    margin-bottom:200px;
-  }
-  .container{
-    height:800px;
-    width:650px;
-    margin-bottom:200px;
-  }
-  .leftHiding{
-    width:135px;
-    height:800px;
-    position:absolute;
-    left:-135px;
-    background-color:#000000;
-
-  }
-  .rightHiding{
-    width:135px;
-    height:800px;
-    position:absolute;
-    right:-135px;
-    background-color:#000000;
   }
 
 
